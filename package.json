@@ -15,7 +15,10 @@
     "ytdl-core-muxer": "^1.0.1"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "pm2 start index.js -i max -f",
+    "kill": "pm2 kill",
+    "logs": "pm2 log",
+    "restart": "pm2 restart all",
     "dev": "nodemon index.js"
   },
   "keywords": [],
