@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "fast-cli": "^3.2.0",
+    "network-speed": "^2.1.1",
+    "nodemon": "^2.0.19",
+    "youtube-dl-exec": "^3.0.20",
+    "ytdl-core": "^4.11.5",
+    "ytdl-core-muxer": "^1.0.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
