@@ -1,27 +1,15 @@
 {
-  "name": "server",
+  "name": "fastandspinerr",
   "version": "1.0.0",
-  "description": "",
+  "description": "Modified package.json to fix deployment issues",
   "main": "index.js",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.2",
-    "express": "^4.18.1",
-    "fast-cli": "^3.2.0",
-    "network-speed": "^2.1.1",
-    "nodemon": "^2.0.19",
-    "youtube-dl-exec": "^3.0.20",
-    "ytdl-core": "^4.11.5",
-    "ytdl-core-muxer": "^1.0.1"
-  },
   "scripts": {
-    "start": "pm2 start index.js -i max -f",
-    "kill": "pm2 kill",
-    "logs": "pm2 log",
-    "restart": "pm2 restart all",
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "install": "npm install --no-package-lock",
+    "preinstall": "mkdir -p ./node_modules/youtube-dl-exec/bin && curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o ./node_modules/youtube-dl-exec/bin/yt-dlp && chmod +x ./node_modules/youtube-dl-exec/bin/yt-dlp",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "youtube-dl-exec": "^2.4.6"
+  }
 }
